@@ -23,8 +23,8 @@
         <module>microservice-common</module>
         <module>microservice-user</module>
         <module>microservice-zuul-server</module>
-        <module>microservice-api</module>
         <module>microservice-service</module>
+        <module>microservice-api</module>
     </modules>
 
     <properties>

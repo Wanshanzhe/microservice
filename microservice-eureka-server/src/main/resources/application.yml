@@ -1,0 +1,23 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  service-url:
+    defaultZone: http://wsz:wsz123@localhost:8761/eureka/
+
+spring:
+  security:
+    user:
+      name: wsz
+      password: wsz123
+      roles: SUPERUSER
+
+logging:
+  config: classpath:logback.xml
+

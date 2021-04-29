@@ -1,0 +1,37 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wsz:wsz123@localhost:8761/eureka/
+
+spring:
+  application:
+    name: microservice-zuul
+
+zuul:
+  prefix: "/micro/"  ## 统一前缀
+  routes:
+    microservice-user:
+      path: /user/**
+      serviceId: microservice-user
+      retryable: true   # 是否允许重试
+    microservice-service:
+      path: /service/**
+      serviceId: microservice-service
+      retryable: true   # 是否允许重试
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+logging:
+  config: classpath:logback.xml
+

@@ -13,7 +13,7 @@
     <artifactId>microservice-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>microservice-api</name>
-    <description>microservice-springCloud 公共API模块</description>
+    <description>microservice-springCloud 公共的API模块</description>
 
     <properties>
         <java.version>1.8</java.version>
